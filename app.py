@@ -22,7 +22,6 @@ def distance():
 
     road_to = nx.dijkstra_path(Graph, source_a, target_b)
     path_length = nx.dijkstra_path_length(Graph, source_a, target_b)
-    path_length = nx.dijkstra_path_length(Graph, source_a, target_b)
 
 
     return render_template("after.html", data=[source_a, target_b, road_to, path_length])
