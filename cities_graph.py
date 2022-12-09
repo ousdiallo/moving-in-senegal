@@ -17,12 +17,13 @@ weighted_cities = [('Rufisque', 'Pikine', 19.6), ('Rufisque', 'Keur Massar', 11.
                            ('Thies', 'Tivaouane', 24.2), ('Thies', 'Rufisque', 42.6), ('Louga', 'Dahra', 88.3),
                            ('Mbacke', 'Dahra', 80.7),  ('Mbacke', 'Kebemer', 101),  ('Kebemer', 'Louga', 37.7),
                            ('Kebemer', 'Tivaouane', 62.9),  ('Louga', 'Saint-Louis', 73.7),  ('Saint-Louis', 'Dagana', 128),
-                           ('Saint-Louis', 'Richard-Toll', 106),  ('Richard-Toll', 'Dagana', 22.9), ('Podor', 'Matam', 240), 
-                           ('Matam', 'Kanel', 32.1), ('Matam', 'Ranerou', 93.3), ('Kanel', 'Bakel', 124), ('Matam', 'Tambacounda' , 242),
+                           ('Saint-Louis', 'Richard-Toll', 106),  ('Richard-Toll', 'Dagana', 22.9), ('Podor', 'Matam', 230), 
+                           ('Matam', 'Kanel', 24), ('Matam', 'Ranerou', 83.3), ('Kanel', 'Bakel', 124), ('Matam', 'Tambacounda' , 232),
                            ('Linguere', 'Ranerou' , 132), ('Dahra', 'Linguere', 42.2),('Kaolack', 'Nioro', 58.9), 
                            ('Kaolack', 'Guinguineo', 26.6), ('Kaolack', 'Birkelane', 41.3), 
                            ('Kaolack', 'Fatick', 45.2), ('Kaolack', 'Foundiougne', 66.4), ('Kaolack', 'Gossas', 38.4),
-                           ('Kaolack', 'Banjul', 120), ('Nioro', 'Kolda', 157),
+                           ('Kaolack', 'Banjul', 120), ('Nioro', 'Farafenni', 29.4),('Farafenni', 'Soma', 16.6),
+                           ('Soma', 'Bounkiling', 54.3), ('Bounkiling', 'Kolda', 107), ('Bounkiling', 'Bignona', 69.2),
                            ('Fatick', 'Bambey', 42.2), ('Fatick', 'Foundiougne', 27.2), ('Fatick', 'Gossas', 49.4), 
                            ('Fatick', 'Mbour', 64.6),('Kaffrine', 'Birkelane', 23.6), ('Kaffrine', 'Malem Hodar', 31.5), 
                            ('Kaffrine', 'Koungheul', 85.6), 
@@ -31,9 +32,9 @@ weighted_cities = [('Rufisque', 'Pikine', 19.6), ('Rufisque', 'Keur Massar', 11.
                            ('Tambacounda', 'Kedougou', 234), ('Kedougou', 'Salemata', 78.8), ('Kedougou', 'Saraya', 59.8),
                            ('Tambacounda', 'Velingara', 96),('Kolda', 'Velingara', 131), ('Kolda', 'Medina Yoro Foulah', 98), 
                            ('Kolda', 'Sedhiou', 88.5),
-                           ('Kolda', 'Goudomp', 156), ('Sedhiou','Bounkiling', 50.4), ('Sedhiou','Bignona', 85.6),
-                           ('Ziguinchor','Bignona', 33.4), ('Ziguinchor','Oussouye', 43.8), ('Ziguinchor','Kolda', 184),
-                           ('Nioro','Bignona', 177), ('Banjul','Bignona', 119)
+                           ('Kolda', 'Goudomp', 149), ('Sedhiou','Bounkiling', 50.4), ('Sedhiou','Bignona', 85.6),
+                           ('Ziguinchor','Bignona', 33.4), ('Ziguinchor','Oussouye', 43.8), ('Ziguinchor','Goudomp', 35),
+                           ('Banjul','Bignona', 119)
                            ]
 
 def buildGraph():
