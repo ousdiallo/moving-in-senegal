@@ -11,7 +11,6 @@ Graph = G.buildGraph()
 
 @app.route("/")
 def home():
-    print(list(Graph.nodes))
     return render_template("home.html")
 
 
