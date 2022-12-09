@@ -4,21 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Le voyageur</title>
   </head>
-  <body>
+  <body style="margin: 100px; padding: 60px">
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quisquam
-      doloribus inventore temporibus unde libero eveniet illo nisi ducimus
-      similique voluptate consequatur rem, at eos iure rerum placeat iste
-      molestias?
+      Le Sénégal, en forme longue la république du Sénégal, est un État
+      d'Afrique de l'Ouest. Il est bordé par l'océan Atlantique à l'ouest, la
+      Mauritanie au nord-nord-est, le Mali à l'est-sud-est, la Guinée au sud-est
+      et la Guinée-Bissau au sud-sud-ouest. La Gambie forme une quasi-enclave
+      dans le Sénégal, pénétrant à plus de 302 km à l'intérieur de ses terres.
+      Les îles du Cap-Vert sont situées à 560 km de la côte sénégalaise.
     </p>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    <h1>
+      Application de recherche de la plus courte distance entre deux villes.
+    </h1>
 
     <form action="{{url_for('distance')}}" method="post">
-      <input type="text" name="source" placeholder="source" />
-      <input type="text" name="target" placeholder="target" />
-      <input type="submit" value="result" />
+      <input type="text" name="source" placeholder="Ville de départ" />
+      <input type="text" name="target" placeholder="Ville d'arrivée" />
+      <input type="submit" value="Rechercher" />
     </form>
   </body>
 </html>
