@@ -11,7 +11,6 @@ Graph = G.buildGraph()
 
 @app.route("/")
 def home():
-    print(list(Graph.nodes))
     return render_template("home.html")
 
 
@@ -22,7 +21,7 @@ def distance():
 
     road_to = nx.dijkstra_path(Graph, source_a, target_b)
     
-    path_length = round(nx.dijkstra_path_length(Graph, source_a, target_b))
+    path_length = round(nx.dijkstra_path_length(Graph, source_a, target_b), 2)
 
 
     return render_template("after.html", data=[source_a, target_b, road_to, path_length])
