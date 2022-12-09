@@ -1,0 +1,43 @@
+import networkx as nx
+
+
+cities = ["Koumpentoum","Goudiry","Bakel","Saint-Louis","Dagana","Podor","Louga","Dahra", "Mbacke","Diourbel",
+               "Mbour","Kanel","Matam","Ranerou","Dakar","Pikine","Rufisque","Guediawaye","Keur Massar","Kaolack",
+               "Guinguineo","Birkelane","Kaffrine","Koungheul","Malem-Hodar","Fatick","Linguere","Kebemer","Richard-Toll",
+               "Foundiougne","Gossas","Ziguinchor", "Bignona","Oussouye","Sedhiou","Bounkiling", "Bambey","Thies",
+               "Tivaouane","Goudomp","Kolda","Medina Yoro Foulah","Velingara","Tambacounda","Nioro",
+               "Kidira","Kedougou","Saraya","Salemata", "Banjul"]
+
+weighted_cities = [('Rufisque', 'Pikine', 19.6), ('Rufisque', 'Keur Massar', 11.9), ('Dakar', 'Guediawaye', 21.6),
+                           ('Pikine', 'Guediawaye', 2.8), ('Guediawaye', 'Keur Massar', 13.1), ('Pikine', 'Dakar', 19.1),
+                           ('Rufisque', 'Dakar', 33.8),
+                           ('Diourbel', 'Gossas', 27.5), ('Diourbel', 'Bambey', 25.1), ('Diourbel', 'Mbacke', 40.7),
+                           ('Bambey', 'Thies', 65.1), ('Thies', 'Tivaouane', 24.2), ('Thies', 'Mbour', 52.8),
+                           ('Rufisque', 'Mbour', 53.6), 
+                           ('Thies', 'Tivaouane', 24.2), ('Thies', 'Rufisque', 42.6), ('Louga', 'Dahra', 88.3),
+                           ('Mbacke', 'Dahra', 80.7),  ('Mbacke', 'Kebemer', 101),  ('Kebemer', 'Louga', 37.7),
+                           ('Kebemer', 'Tivaouane', 62.9),  ('Louga', 'Saint-Louis', 73.7),  ('Saint-Louis', 'Dagana', 128),
+                           ('Saint-Louis', 'Richard-Toll', 106),  ('Richard-Toll', 'Dagana', 22.9), ('Podor', 'Matam', 240), 
+                           ('Matam', 'Kanel', 32.1), ('Matam', 'Ranerou', 93.3), ('Kanel', 'Bakel', 124), ('Matam', 'Tambacounda' , 242),
+                           ('Linguere', 'Ranerou' , 132), ('Dahra', 'Linguere', 42.2),('Kaolack', 'Nioro', 58.9), 
+                           ('Kaolack', 'Guinguineo', 26.6), ('Kaolack', 'Birkelane', 41.3), 
+                           ('Kaolack', 'Fatick', 45.2), ('Kaolack', 'Foundiougne', 66.4), ('Kaolack', 'Gossas', 38.4),
+                           ('Kaolack', 'Banjul', 120), ('Nioro', 'Kolda', 157),
+                           ('Fatick', 'Bambey', 42.2), ('Fatick', 'Foundiougne', 27.2), ('Fatick', 'Gossas', 49.4), 
+                           ('Fatick', 'Mbour', 64.6),('Kaffrine', 'Birkelane', 23.6), ('Kaffrine', 'Malem Hodar', 31.5), 
+                           ('Kaffrine', 'Koungheul', 85.6), 
+                           ('Kaffrine', 'Mbacke', 108), ('Kaffrine', 'Gossas', 96.9), ('Koungheul', 'Koumpentoum', 27.2),
+                           ('Tambacounda', 'Koumpentoum', 102), ('Tambacounda', 'Goudiry', 115), ('Goudiry', 'Bakel', 136),
+                           ('Tambacounda', 'Kedougou', 234), ('Kedougou', 'Salemata', 78.8), ('Kedougou', 'Saraya', 59.8),
+                           ('Tambacounda', 'Velingara', 96),('Kolda', 'Velingara', 131), ('Kolda', 'Medina Yoro Foulah', 98), 
+                           ('Kolda', 'Sedhiou', 88.5),
+                           ('Kolda', 'Goudomp', 156), ('Sedhiou','Bounkiling', 50.4), ('Sedhiou','Bignona', 85.6),
+                           ('Ziguinchor','Bignona', 33.4), ('Ziguinchor','Oussouye', 43.8), ('Ziguinchor','Kolda', 184),
+                           ('Nioro','Bignona', 177), ('Banjul','Bignona', 119)
+                           ]
+
+def buildGraph():
+    G=nx.Graph()
+    G.add_nodes_from(cities)
+    G.add_weighted_edges_from(weighted_cities)
+    return G
