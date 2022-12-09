@@ -20,7 +20,11 @@ def distance():
     target_b = request.form['target']
 
     road_to = nx.dijkstra_path(Graph, source_a, target_b)
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 0e56b64a6a0666376373ebc606811761c9feed89
     path_length = round(nx.dijkstra_path_length(Graph, source_a, target_b), 2)
 
 
