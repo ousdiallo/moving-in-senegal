@@ -10,5 +10,5 @@ Dataset from:
   
   
   
-# To run the app:  python app.py and go to your web brower at : http://127.0.0.1:5000/
+ To run the app:  python app.py and go to your web brower at : http://127.0.0.1:5000/
 
