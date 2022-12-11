@@ -1,28 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Le voyageur</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
   </head>
-  <body style="margin: 100px; padding: 60px">
-    <p>
-      Le Sénégal, en forme longue la république du Sénégal, est un État
-      d'Afrique de l'Ouest. Il est bordé par l'océan Atlantique à l'ouest, la
-      Mauritanie au nord-nord-est, le Mali à l'est-sud-est, la Guinée au sud-est
-      et la Guinée-Bissau au sud-sud-ouest. La Gambie forme une quasi-enclave
-      dans le Sénégal, pénétrant à plus de 302 km à l'intérieur de ses terres.
-      Les îles du Cap-Vert sont situées à 560 km de la côte sénégalaise.
-    </p>
-    <h1>
-      Application de recherche de la plus courte distance entre deux villes.
-    </h1>
 
-    <form action="{{url_for('distance')}}" method="post">
-      <input type="text" name="source" placeholder="Ville de départ" />
-      <input type="text" name="target" placeholder="Ville d'arrivée" />
-      <input type="submit" value="Rechercher" />
-    </form>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Le voyageur</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nos Villes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+      <div class="container-fluid text-sm-center p-5 bg-light mt-3">
+        <!-- bg-light is background color & p-5 is padding -->
+        <h1 class="display-2">Les routes du Sénégal</h1>
+        <p class="lead">Nous vous aidons à trouver le plus court chemin!</p>
+      </div>
+
+      <!-- card -->
+
+      <div class="card m-3">
+        <img
+          src="static/senmap.png"
+          class="card-img-top"
+          alt="..."
+          style="width: 100%; height: 20vh"
+        />
+        <div class="card-body">
+          <h3 class="card-title">Je commence la recherche</h3>
+          <p class="card-text">
+            Tapez votre ville de départ et votre destination
+          </p>
+          <!-- form -->
+          <form
+            class="row row-cols-lg-auto g-3 align-items-center m-3"
+            action="{{url_for('distance')}}"
+            method="POST"
+          >
+            <div class="col-12">
+              <label class="visually-hidden" for="inlineFormInputGroupFrom"
+                >Source</label
+              >
+              <div class="input-group">
+                <div class="input-group-text">De</div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inlineFormInputGroupFrom"
+                  placeholder="Ville de départ"
+                  name="source"
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="visually-hidden" for="inlineFormInputGroupTo"
+                >Destination</label
+              >
+              <div class="input-group">
+                <div class="input-group-text">Vers</div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inlineFormInputGroupTo"
+                  placeholder="Ville de destination"
+                  name="target"
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">
+                Rechercher !
+              </button>
+            </div>
+          </form>
+          <p class="card-text mt-3">
+            <small class="text-muted"
+              >Exemple: Dakar, Kaolack, Saint-Lous, Bounkiling, Matam, Dahra,
+              Nioro, Soma...</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- text -->
+
+    <div class="container-fluid">
+      <div class="m-5 p-5">
+          <h2>Sénégal</h2>
+          <br />
+          <br />
+          <p>
+            Le Sénégal, en forme longue la république du Sénégal, est un État
+            d'Afrique de l'Ouest. Il est bordé par l'océan Atlantique à l'ouest,
+            la Mauritanie au nord-nord-est, le Mali à l'est-sud-est, la Guinée
+            au sud-est et la Guinée-Bissau au sud-sud-ouest. La Gambie forme une
+            quasi-enclave dans le Sénégal, pénétrant à plus de 302 km à
+            l'intérieur de ses terres. Les îles du Cap-Vert sont situées à
+            560 km de la côte sénégalaise.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="container-fluid text-center">
+      <p>
+        UVS BDA
+        <a href="https://www.uvs.sn/" title="UVS"
+          >Big Data Analytics</a
+        >
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
