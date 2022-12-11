@@ -54,7 +54,7 @@
 
       <div class="card m-3">
         <img
-          src="static/senmap.png"
+          src="{{url_for('static', filename='senmap.png')}}"
           class="card-img-top"
           alt="..."
           style="width: 100%; height: 20vh"
@@ -82,6 +82,7 @@
                   id="inlineFormInputGroupFrom"
                   placeholder="Ville de départ"
                   name="source"
+                  required
                 />
               </div>
             </div>
@@ -97,6 +98,7 @@
                   id="inlineFormInputGroupTo"
                   placeholder="Ville de destination"
                   name="target"
+                  required
                 />
               </div>
             </div>

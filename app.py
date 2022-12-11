@@ -16,8 +16,8 @@ def home():
 
 @app.route("/result", methods=["POST"])
 def distance():
-    source_a = request.form['source']
-    target_b = request.form['target']
+    source_a = (request.form['source']).strip()
+    target_b = (request.form['target']).strip()
 
     road_to = nx.dijkstra_path(Graph, source_a, target_b)
 
