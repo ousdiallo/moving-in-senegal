@@ -55,9 +55,10 @@
       <div class="card text-center my-3">
         <div class="card-header">Résultats</div>
         <div class="card-body">
-          <p class="card-text">Le trajet le plus rapide pour aller à
-          <strong>{{ data[1] }}</strong> partant de
-          <strong>{{ data[0] }}</strong>
+          <p class="card-text">Le trajet le plus rapide de
+          <strong class="text-warning"> {{ data[0] }}</strong>
+          à
+          <strong class="text-warning">{{ data[1] }}</strong>
           est {% set cities = data[2] %}
           <div class="card-text">
             <ul>
