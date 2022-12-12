@@ -56,14 +56,14 @@
         <div class="card-header">Résultats</div>
         <div class="card-body">
           <p class="card-text">Itinéraire optimal pour aller à
-          <strong class="btn btn-light">{{ data[1] }}</strong> partant de
-          <strong class="btn btn-light">{{ data[0] }}</strong>
+          <strong>{{ data[1] }}</strong> partant de
+          <strong>{{ data[0] }}</strong>
           est {% set cities = data[2] %}
           <div class="card-text">
             <ul>
               {% for city in cities %}
               <span class="badge h4 text-bg-light" >
-              {{ city }}
+              {{ city }} ->
             </span>
               {% endfor %}
             </ul>
