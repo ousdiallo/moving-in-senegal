@@ -44,7 +44,7 @@
 
   <body>
     <div class="container">
-      <div class="container-fluid text-sm-center p-5 bg-light mt-3">
+      <div class="container-fluid text-sm-center py-2 bg-light mt-3">
         <!-- bg-light is background color & p-5 is padding -->
         <h1 class="display-2">Les routes du Sénégal</h1>
         <p class="lead">Nous vous aidons à trouver le plus court chemin!</p>
@@ -52,7 +52,7 @@
 
       <!-- card -->
 
-      <div class="card m-3">
+      <div class="card mt-3">
         <img
           src="https://mediaim.expedia.com/destination/1/f2baf1dcc61392a9ec4f9d8c3e5c9fd9.jpg"
           class="card-img-top"
@@ -62,51 +62,143 @@
         <div class="card-body">
           <h3 class="card-title">Je commence la recherche</h3>
           <p class="card-text">
-            Tapez votre ville de départ et votre destination
+            Sélectionnez votre ville de départ et votre destination
           </p>
           <!-- form -->
           <form
-            class="row row-cols-lg-auto g-3 align-items-center m-3"
+            class="form-horizontal row row-cols-lg"
             action="{{url_for('distance')}}"
             method="POST"
           >
-            <div class="col-12">
-              <label class="visually-hidden" for="inlineFormInputGroupFrom"
-                >Source</label
-              >
-              <div class="input-group">
-                <div class="input-group-text">De</div>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inlineFormInputGroupFrom"
-                  placeholder="Ville de départ"
-                  name="source"
-                  required
-                />
+          <div class="row align-items-center mx-auto">
+            <div class="col my-3">
+              <div class="form-floating">
+                <select name="source" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                  <option selected>Dakar</option>
+                  <option value="Bakel">Bakel</option>
+                  <option value="Bambey">Bambey</option>
+                  <option value="Banjul">Banjul</option>
+                  <option value="Bignona">Bignona</option>
+                  <option value="Birkelane">Birkelane</option>
+                  <option value="Bounkiling">Bounkiling</option>
+                  <option value="Dagana">Dagana</option>
+                  <option value="Dahra">Dahra</option>
+                  <option value="Dakar">Dakar</option>
+                  <option value="Diourbel">Diourbel</option>
+                  <option value="Farafenni">Farafenni</option>
+                  <option value="Fatick">Fatick</option>
+                  <option value="Foundiougne">Foundiougne</option>
+                  <option value="Gossas">Gossas</option>
+                  <option value="Goudiry">Goudiry</option>
+                  <option value="Goudomp">Goudomp</option>
+                  <option value="Guediawaye">Guédiawaye</option>
+                  <option value="Guinguineo">Guinguineo</option>
+                  <option value="Kaffrine">Kaffrine</option>
+                  <option value="Kanel">Kanel</option>
+                  <option value="Kaolack">Kaolack</option>
+                  <option value="Kebemer">Kébémer</option>
+                  <option value="Kedougou">Kedougou</option>
+                  <option value="Keur Massar">Keur Massar</option>
+                  <option value="Kidira">Kidira</option>
+                  <option value="Kolda">Kolda</option>
+                  <option value="Koumpentoum">Koumpentoum</option>
+                  <option value="Koungheul">Koungheul</option>
+                  <option value="Linguere">Linguère</option>
+                  <option value="Louga">Louga</option>
+                  <option value="Malem-Hodar">Malem-Hodar</option>
+                  <option value="Matam">Matam</option>
+                  <option value="Mbacke">Mbacke</option>
+                  <option value="Mbour">Mbour</option>
+                  <option value="Medina Yoro Foulah">Médina Yoro Foulah</option>
+                  <option value="Nioro">Nioro</option>
+                  <option value="Oussouye">Oussouye</option>
+                  <option value="Pikine">Pikine</option>
+                  <option value="Podor">Podor</option>
+                  <option value="Ranerou">Ranerou</option>
+                  <option value="Richard-Toll">Richard-Toll</option>
+                  <option value="Rufisque">Rufisque</option>
+                  <option value="Saint-Louis">Saint-Louis</option>
+                  <option value="Salemata">Salemata</option>
+                  <option value="Saraya">Saraya</option>
+                  <option value="Sedhiou"></option>
+                  <option value="Soma">Soma</option>
+                  <option value="Tambacounda">Tambacounda</option>
+                  <option value="Thies">Thiès</option>
+                  <option value="Tivaouane">Tivaouane</option>
+                  <option value="Velingara">Vélingara</option>
+                  <option value="Ziguinchor"></option>
+                </select>
+                <label for="floatingSelectGrid">Départ</label>
               </div>
             </div>
-            <div class="col-12">
-              <label class="visually-hidden" for="inlineFormInputGroupTo"
-                >Destination</label
-              >
-              <div class="input-group">
-                <div class="input-group-text">Vers</div>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inlineFormInputGroupTo"
-                  placeholder="Ville de destination"
-                  name="target"
-                  required
-                />
+            <div class="col my-3">
+              <div class="form-floating">
+                <select name="target" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                  <option selected>Kaolack</option>
+                  <option value="Bakel">Bakel</option>
+                  <option value="Bambey">Bambey</option>
+                  <option value="Banjul">Banjul</option>
+                  <option value="Bignona">Bignona</option>
+                  <option value="Birkelane">Birkelane</option>
+                  <option value="Bounkiling">Bounkiling</option>
+                  <option value="Dagana">Dagana</option>
+                  <option value="Dahra">Dahra</option>
+                  <option value="Dakar">Dakar</option>
+                  <option value="Diourbel">Diourbel</option>
+                  <option value="Farafenni">Farafenni</option>
+                  <option value="Fatick">Fatick</option>
+                  <option value="Foundiougne">Foundiougne</option>
+                  <option value="Gossas">Gossas</option>
+                  <option value="Goudiry">Goudiry</option>
+                  <option value="Goudomp">Goudomp</option>
+                  <option value="Guediawaye">Guédiawaye</option>
+                  <option value="Guinguineo">Guinguineo</option>
+                  <option value="Kaffrine">Kaffrine</option>
+                  <option value="Kanel">Kanel</option>
+                  <option value="Kaolack">Kaolack</option>
+                  <option value="Kebemer">Kébémer</option>
+                  <option value="Kedougou">Kedougou</option>
+                  <option value="Keur Massar">Keur Massar</option>
+                  <option value="Kidira">Kidira</option>
+                  <option value="Kolda">Kolda</option>
+                  <option value="Koumpentoum">Koumpentoum</option>
+                  <option value="Koungheul">Koungheul</option>
+                  <option value="Linguere">Linguère</option>
+                  <option value="Louga">Louga</option>
+                  <option value="Malem-Hodar">Malem-Hodar</option>
+                  <option value="Matam">Matam</option>
+                  <option value="Mbacke">Mbacke</option>
+                  <option value="Mbour">Mbour</option>
+                  <option value="Medina Yoro Foulah">Médina Yoro Foulah</option>
+                  <option value="Nioro">Nioro</option>
+                  <option value="Oussouye">Oussouye</option>
+                  <option value="Pikine">Pikine</option>
+                  <option value="Podor">Podor</option>
+                  <option value="Ranerou">Ranerou</option>
+                  <option value="Richard-Toll">Richard-Toll</option>
+                  <option value="Rufisque">Rufisque</option>
+                  <option value="Saint-Louis">Saint-Louis</option>
+                  <option value="Salemata">Salemata</option>
+                  <option value="Saraya">Saraya</option>
+                  <option value="Sedhiou"></option>
+                  <option value="Soma">Soma</option>
+                  <option value="Tambacounda">Tambacounda</option>
+                  <option value="Thies">Thiès</option>
+                  <option value="Tivaouane">Tivaouane</option>
+                  <option value="Velingara">Vélingara</option>
+                  <option value="Ziguinchor"></option>
+                </select>
+                <label for="floatingSelectGrid">Destination</label>
               </div>
             </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">
-                Rechercher !
-              </button>
+            <div class="col my-3">
+              <div class="form-floating">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Chercher
+                </button> 
+              </div> 
             </div>
+          </div> 
           </form>
           <p class="card-text mt-3">
             <small class="text-muted"
@@ -114,14 +206,20 @@
               Nioro, Soma...</small
             >
           </p>
+          
         </div>
       </div>
     </div>
+    <!-- liste -->
+
+  
+   
+
 
     <!-- text -->
 
-    <div class="container-fluid">
-      <div class="m-5 p-5">
+    <div class="container mt-4">
+      <div class="m-2 p-1">
           <h2>Sénégal</h2>
           <br />
           <br />
