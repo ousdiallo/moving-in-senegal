@@ -1,7 +1,7 @@
 import networkx as nx
 
 
-cities = ["Koumpentoum","Goudiry","Bakel","Saint-Louis","Dagana","Podor","Louga","Dahra", "Mbacke","Diourbel",
+cities = ["Koumpentoum","Goudiri","Bakel","Saint-Louis","Dagana","Podor","Louga","Dahra", "Mbacke","Diourbel",
                "Mbour","Kanel","Matam","Ranerou","Dakar","Pikine","Rufisque","Guediawaye","Keur Massar","Kaolack",
                "Guinguineo","Birkelane","Kaffrine","Koungheul","Malem-Hodar","Fatick","Linguere","Kebemer","Richard-Toll",
                "Foundiougne","Gossas","Ziguinchor", "Bignona","Oussouye","Sedhiou","Bounkiling", "Bambey","Thies",
@@ -26,10 +26,11 @@ weighted_cities = [('Rufisque', 'Pikine', 19.6), ('Rufisque', 'Keur Massar', 11.
                            ('Kaolack', 'Banjul', 120), ('Nioro', 'Farafenni', 29.4),('Farafenni', 'Soma', 16.6),
                            ('Soma', 'Bounkiling', 54.3), ('Bounkiling', 'Kolda', 107), ('Bounkiling', 'Bignona', 69.2),
                            ('Fatick', 'Bambey', 42.2), ('Fatick', 'Foundiougne', 27.2), ('Fatick', 'Gossas', 49.4), 
-                           ('Fatick', 'Mbour', 64.6),('Kaffrine', 'Birkelane', 23.6), ('Kaffrine', 'Malem Hodar', 31.5), 
-                           ('Kaffrine', 'Koungheul', 85.6), 
+                           ('Fatick', 'Mbour', 64.6),('Kaffrine', 'Birkelane', 23.6), ('Kaffrine', 'Malem-Hodar', 31.5), 
+                           ('Kaffrine', 'Koungheul', 85.6), ("Goudiri", "Kidira", 71.5), ("Bakel", "Kidira", 60),
+                           ("Bakel", "Ouro Sogui", 139), ('Malem-Hodar','Koungheul', 58.4),
                            ('Kaffrine', 'Mbacke', 108), ('Kaffrine', 'Gossas', 96.9), ('Koungheul', 'Koumpentoum', 27.2),
-                           ('Tambacounda', 'Koumpentoum', 102), ('Tambacounda', 'Goudiry', 115), ('Goudiry', 'Bakel', 136),
+                           ('Tambacounda', 'Koumpentoum', 102), ('Tambacounda', 'Goudiri', 115),
                            ('Tambacounda', 'Kedougou', 234), ('Kedougou', 'Salemata', 78.8), ('Kedougou', 'Saraya', 59.8),
                            ('Tambacounda', 'Velingara', 96),('Kolda', 'Velingara', 131), ('Kolda', 'Medina Yoro Foulah', 98), 
                            ('Kolda', 'Sedhiou', 88.5),

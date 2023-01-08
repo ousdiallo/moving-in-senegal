@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 
 import networkx as nx
 
-import cities_graph as G
+import city_factory as G
 
 
 app = Flask(__name__)
